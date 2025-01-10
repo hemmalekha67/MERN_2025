@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resize Image with Opacity</title>
+    <style>
+        #container {
+            position: relative;
+            display: inline-block;
+        }
+        #resizable-image {
+            width: 300px;
+            height: 300px;
+            transition: opacity 0.5s ease;
+        }
+        #resize-handle {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            cursor: se-resize;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Resize and Control Opacity of Image</h2>
+
+    <div id="container">
+        <img id="resizable-image" src="https://th.bing.com/th/id/R.9163f91d6de0eefc0cc3760ab0e72033?rik=X7zq%2fvPE9Ol3Lg&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fP3sBn5T.jpg&ehk=%2bCxBGnWBePMgCwklQThrOeXQo1PbwH7cNepW3hSlsmM%3d&risl=&pid=ImgRaw&r=0" alt="Resizable Image">
+        <div id="resize-handle"></div>
+    </div>
+
+    <br>
+
+    <label for="opacity-slider">Opacity:</label>
+    <input type="range" id="opacity-slider" min="0" max="1" step="0.1" value="1">
+
+    <script>
+        const image = document.getElementById('resizable-image');
+        const resizeHandle = document.getElementById('resize-handle');
+        const opacitySlider = document.getElementById('opacity-slider');
+
+        let isResizing = false;
+
+       
+        resizeHandle.addEventListener('mousedown', (e) => {
+            isResizing = true;
+
+            document.addEventListener('mousemove', resizeImage);
+            document.addEventListener('mouseup', () => {
+                isResizing = false;
+                document.removeEventListener('mousemove', resizeImage);
+            });
+        });
+
+      
+        function resizeImage(e) {
+            if (isResizing) {
+                const width = e.clientX - image.offsetLeft;
+                const height = e.clientY - image.offsetTop;
+
+                image.style.width = `${width}px`;
+                image.style.height = `${height}px`;
+            }
+        }
+
+       
+        opacitySlider.addEventListener('input', (e) => {
+            const opacityValue = e.target.value;
+            image.style.opacity = opacityValue;
+        });
+    </script>
+
+</body>
+</html>
