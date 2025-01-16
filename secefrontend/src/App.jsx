@@ -2,12 +2,24 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import Home from './components/functional_components/Home';
+import Comone from './components/functional_components/Comone';
+import Comtwo from './components/functional_components/Comtwo';
+import Comthree from './components/functional_components/Comthree';
+import Comfour from './components/functional_components/Comfour';
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <div>
+      <Home/>
+      <Comone/>
+      <Comtwo/>
+      <Comthree/>
+      <Comfour/>
+    </div>
+    
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

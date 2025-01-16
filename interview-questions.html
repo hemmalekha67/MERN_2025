@@ -4,23 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interview Questions</title>
+    
 </head>
 <body>
-    <h1> Interview Questions</h1>
+    <h1>INTERVIEW QUESTIONS</h1>
+
     <div>
-        <p>1. What is the name of the tree in DOM?</p>
+        <h3>1. What is spec file in MEAN stack</h3>
+        <p>A spec file contains test cases written to ensure that a specific component, function, or module behaves as expected. 
+           The term "spec" is short for specification, as it defines what the code under test should do.</p>
     </div>
+
     <div>
-        <p>2. What is Git?</p>
+        <h3>2. What is the name of the tree in DOM?</h3>
+        <p>The name of the tree in DOM is <b>n-array tree</b>.</p>
     </div>
+
     <div>
-        <p>3. If you want to make a folder as a repository of your github then you need to do what?</p>
+        <h3>3. What is Git?</h3>
+        <p>Git is a distributed version control system.</p>
     </div>
+
     <div>
-        <p>4. Why ggit is fast in executing the commands typed?</p>
+        <h3>4. Which command is used to make a folder or file a GitHub repository?</h3>
+        <p>The command <b>git init</b> is used to make a folder or file a GitHub repository.</p>
     </div>
+
     <div>
-        <p>5. What is the staging area called as?</p>
+        <h3>5. Why is Git fast in executing commands?</h3>
+        <p>Git is fastest in executing commands because it is developed in <b>C language</b>.</p>
+    </div>
+
+    <div>
+        <h3>6. How is the staging area called before the first push?</h3>
+        <p>Before the first push, the staging area is called the <b>caching area</b>.</p>
+    </div>
+
+    <div>
+        <h3>7. In a local repository, if the root folder is the repository, what is the name of the subfolder?</h3>
+        <ol type="a">
+            <li>Repository</li>
+            <li>Folder</li>
+            <li>Subfolder</li>
+            <li>None of the above</li>
+        </ol>
+        <p>Answer: <b>d. None of the above</b></p>
+    </div>
+
+    <div>
+        <h3>8. If the following is typed in an HTML file without its basic structure, what will appear in the inspect tab?</h3>
+        <ol type="i">
+            <li>&lt;h1&gt;Hello world!&lt;/h1&gt;</li>
+            <li>&lt;title&gt;sece2025&lt;/title&gt;<br>&lt;h1&gt;Hello world!&lt;/h1&gt;</li>
+            <li>&lt;h1&gt;Hello world!&lt;/h1&gt;<br>&lt;title&gt;sece2025&lt;/title&gt;</li>
+        </ol>
+        <p>
+            Answer:
+            <br>
+            <b>i. &lt;html&gt;<br>&lt;head&gt;&lt;/head&gt;<br>&lt;body&gt;&lt;h1&gt;Hello world!&lt;/h1&gt;&lt;/body&gt;<br>&lt;/html&gt;</b>
+            <br><br>
+            <b>ii. &lt;html&gt;<br>&lt;head&gt;&lt;title&gt;sece2025&lt;/title&gt;&lt;/head&gt;<br>&lt;body&gt;&lt;h1&gt;Hello world!&lt;/h1&gt;&lt;/body&gt;<br>&lt;/html&gt;</b>
+            <br><br>
+            <b>iii. &lt;html&gt;<br>&lt;head&gt;&lt;/head&gt;<br>&lt;body&gt;&lt;h1&gt;Hello world!&lt;/h1&gt;&lt;title&gt;sece2025&lt;/title&gt;&lt;/body&gt;<br>&lt;/html&gt;</b>
+            <br>
+            <b>Reason:</b> The &lt;title&gt; tag appears in the &lt;body&gt; when inspecting because the browser encounters visible content like &lt;h1&gt; first, causing it to start rendering the &lt;body&gt; implicitly before processing the &lt;title&gt;.
+        </p>
+    </div>
+
+    <h1>R&D QUESTIONS</h1>
+
+    <div>
+        <h3>1. Why is Git not showing the git commit command while adding a file and instead showing a command for unstage?</h3>
+        <p>Git is not showing the git commit command because files are already staged and ready for a commit.</p>
+    </div>
+
+    <div>
+        <h3>2. What is the difference before the first push and after the first push?</h3>
+        <p>Before the first push, there is no link between the local and remote repository. After the first push, there is a link established between the local and remote repository.</p>
+    </div>
+
+    <div>
+        <h3>3. How are the &lt;title&gt; tag and &lt;h1&gt; tag fetched when rendering an HTML file with no structure?</h3>
+        <p>The browser automatically places the &lt;title&gt; tag into the head and the &lt;h1&gt; tag into the body based on HTML parsing rules and defaults.</p>
+    </div>
+
+    <div>
+        <h3>4. What is the difference between href and src, and why are they used in img and anchor tags?</h3>
+        <p>href is used with the anchor tag to redirect to an external link, while src is used with img tags to embed content within a webpage.</p>
+    </div>
+
+    <div>
+        <h3>5. Why are there three dots in if...else and do...while?</h3>
+        <p>The three dots (...) in if...else and do...while in documentation or examples are placeholders used to indicate omitted code or logic. They imply additional statements or blocks should be added in those places.</p>
+    </div>
+
+    <div>
+        <h3>6. What is the difference between the spread and rest operator?</h3>
+        <p>The spread operator (...) expands an array or object, while the rest operator (...) collects multiple elements into an array or parameters and is used as a function parameter.</p>
+    </div>
+
+    <div>
+        <h3>7. In a for-in loop, why is the output undefined when accessing an object property using the dot operator?</h3>
+        <p>The output is undefined because obj.key looks for a property literally named "key" in the object instead of dynamically accessing the property using the key variable.</p>
+    </div>
+
+    <div>
+        <h3>8. Why should components start with a capital letter?</h3>
+        <p>Components should start with a capital letter because React uses capitalized names to differentiate components from standard HTML tags.</p>
+    </div>
+
+    <div>
+        <h3>9. Why is the default keyword used while exporting a component?</h3>
+        <p>The default keyword is not mandatory; it specifies a default export, allowing the component to be imported without curly braces, unlike named exports which require them.</p>
     </div>
 </body>
 </html>
