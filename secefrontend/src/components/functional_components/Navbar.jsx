@@ -1,19 +1,21 @@
+import {Link} from 'react-router-dom';
 import'../../Css/Navbar.css';
 const Navbar=()=>{
-    var styling={
-        textDecoration:"underline",
-        color:"blue",
-        listStyleType:"none",
-        textAlign:"center"
-    }
+    // var styling={
+    //     textDecoration:"underline",
+    //     color:"black",
+    //     listStyleType:"none",
+    //     textAlign:"center"
+    // }
     return(
         <header>
         <nav>
-            <ol style={styling}>
-                <li>Home</li>
-                <li>About</li>
-                <li>Gallery</li>
-                <li>Contact</li>
+            <ol>
+                <li><Link to='/' className='link'>Home</Link></li>
+                <li><Link  to='/About' className='link'>About</Link></li>
+                <li><Link to='/Gallery' className='link'>Gallery</Link></li>
+                <li><Link to='/Contact' className='link'>Contact</Link></li>
+                <li><Link to='/Signup' className='link'>Signup</Link></li>
             </ol>
         </nav>
         </header>

@@ -1,4 +1,20 @@
 ol{
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    list-style-type: none;
+    margin:0;
+    padding:10px;
+    background-color: rgb(245, 162, 250);
+    color:aliceblue
+}
+.link{
+    text-decoration: none;
+    color: rgb(19, 19, 19);
+    
+}
+.link:hover{
+background-color: black;
+color: rgb(243, 177, 250);
+border-radius: 10px;
+padding :5px;
 }
