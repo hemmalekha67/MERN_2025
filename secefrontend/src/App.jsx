@@ -7,22 +7,55 @@ import About from './components/functional_components/About';
 import Navbar from './components/functional_components/NavBar';
 import Signup from './components/functional_components/Signup';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-function App() {
+
+  function App() {
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [user, setUser] = useState({ username: '', password: '' }); 
+    const handleSignup = (username, password) => {
+      setUser({ username, password }); 
+      alert('Signup successful! Please log in.');
+    };
+    const handleLogin = (username, password) => {
+      if (username === user.username && password === user.password) {
+        setIsAuthenticated(true);
+      } else {
+        alert('Invalid username or password!');
+      }
+    };
   const [count, setCount] = useState(0)
 
   return (
-  
+    <>
+    <BrowserRouter>
+    <Navbar/>
+    <Routes>
+      <Route path="/" element={<Home />} ></Route>
+      <Route path="/about" element={<About />} ></Route>
+      <Route path="/gallery" element={<Gallery page="Gallery" img ="time"/>} ></Route>
+      <Route path="/contact" element={<Contact />} ></Route>
+      <Route path="/signup" element={<Signup />} ></Route>
+     </Routes>
+    </BrowserRouter>
       <BrowserRouter>
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/about" element={<About/>}></Route>
-        <Route path="/gallery" element={<Gallery image="Secelogo" page="Gallery"/>}></Route>
-        <Route path="/contact" element={<Contact/>}></Route>
-        <Route path='/signup'element={<Signup/>}></Route>
-      </Routes>
+        {isAuthenticated ? (
+          <>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/gallery" element={<Gallery page="Gallery" img="time" />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </>
+        ) : (
+          <Routes>
+            <Route path="/" element={<Login onLogin={handleLogin} />} />
+            <Route path="/signup" element={<Signup onSignup={handleSignup} />} />
+          </Routes>
+        )}
       </BrowserRouter>
+    </>
   )
-}
 
-export default App
+}
+export default App;
