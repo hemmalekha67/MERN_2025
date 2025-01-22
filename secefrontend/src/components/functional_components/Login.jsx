@@ -1,38 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-function Login({ onLogin }) {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onLogin(username, password); 
-  };
+import'../../css/Login.css';
+const Login = () => {
   return (
-    <div>
+    <div className="form-container">
       <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button type="submit">Login</button>
+      <form>
+        <label htmlFor="login-email">Email:</label>
+        <input type="email" id="login-email" name="login-email" required />
+        <label htmlFor="login-password">Password:</label>
+        <input type="password" id="login-password" name="login-password" required />
+        <button type="submit" className="login-button">Login</button>
       </form>
-      <p>
-        Don't have an account? <Link to="/signup">Signup here</Link>
+      <p className="switch-link">
+        Don&apos;t have an account? <Link to="/signup">Signup</Link>
       </p>
     </div>
   );
-}
+};
 export default Login;
