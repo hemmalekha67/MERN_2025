@@ -9,6 +9,7 @@ import Signup from './components/functional_components/Signup';
 import Login from './components/functional_components/Login';
 import UseState from './components/functional_components/Hooks/UseState';
 import UseEffect from './components/functional_components/Hooks/UseEffect';
+import UseEffectAPI from './components/functional_components/Hooks/UseEffectAPI';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +26,7 @@ function App() {
       <Route path="/useEffect"element={<UseEffect/>}></Route>
       <Route path="/signup"element={<Signup />}></Route>
       <Route path="/login"element={<Login />}></Route>
+      <Route path='/UseEffectAPI'element={<UseEffectAPI/>}></Route>
       
       </Routes>
     </BrowserRouter>

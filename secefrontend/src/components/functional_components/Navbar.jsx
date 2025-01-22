@@ -26,6 +26,7 @@ const Navbar=()=>{
                 </div>
                 <li><Link to='/Signup' className='link'>Signup</Link></li>
                 <li><Link to='/login' className='link'>Login</Link></li>
+                <li><Link to='UseEffectAPI' className='link'>UseEffectAPI</Link></li>
 
             </ol>
         </nav>
