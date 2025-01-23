@@ -10,6 +10,8 @@ import Login from './components/functional_components/Login';
 import UseState from './components/functional_components/Hooks/UseState';
 import UseEffect from './components/functional_components/Hooks/UseEffect';
 import UseEffectAPI from './components/functional_components/Hooks/UseEffectAPI';
+import UseEffectAPIimage from './components/functional_components/Hooks/UseEffectAPIimage';
+import UseReducer from './components/functional_components/Hooks/UseReducer';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,7 +29,8 @@ function App() {
       <Route path="/signup"element={<Signup />}></Route>
       <Route path="/login"element={<Login />}></Route>
       <Route path='/UseEffectAPI'element={<UseEffectAPI/>}></Route>
-      
+      <Route path='/UseEffectAPIimage' element={<UseEffectAPIimage/>}></Route>
+      <Route path='/UseReducer'element={<UseReducer/>}></Route>
       </Routes>
     </BrowserRouter>
   )

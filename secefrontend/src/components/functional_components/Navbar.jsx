@@ -19,14 +19,17 @@ const Navbar=()=>{
                     {dropdown &&(
                         <ul>
                         <li><Link to='/useState' className='link'>useState</Link></li>
-                        <li><Link to='useEffect' className='link'>useEffect</Link></li>
+                        <li><Link to='/useEffect' className='link'>useEffect</Link></li>
+                        <li><Link to='UseEffectAPI' className='link'>UseEffectAPI</Link></li>
+                        <li><Link to='/UseEffectAPIimage' className='link'>useEffectAPIImage</Link></li>
+                        <li><Link to='/UseReducer' className='link'>useReducer</Link></li>
                     </ul>
                     )}
                     
                 </div>
                 <li><Link to='/Signup' className='link'>Signup</Link></li>
                 <li><Link to='/login' className='link'>Login</Link></li>
-                <li><Link to='UseEffectAPI' className='link'>UseEffectAPI</Link></li>
+                
 
             </ol>
         </nav>
