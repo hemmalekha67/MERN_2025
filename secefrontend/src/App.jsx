@@ -12,6 +12,9 @@ import UseEffect from './components/functional_components/Hooks/UseEffect';
 import UseEffectAPI from './components/functional_components/Hooks/UseEffectAPI';
 import UseEffectAPIimage from './components/functional_components/Hooks/UseEffectAPIimage';
 import UseReducer from './components/functional_components/Hooks/UseReducer';
+import UseRef from './components/functional_components/Hooks/UseRef';
+import UseMemo from './components/functional_components/Hooks/UseMemo';
+import Usecallback from './components/functional_components/Hooks/Usecallback';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,6 +34,9 @@ function App() {
       <Route path='/UseEffectAPI'element={<UseEffectAPI/>}></Route>
       <Route path='/UseEffectAPIimage' element={<UseEffectAPIimage/>}></Route>
       <Route path='/UseReducer'element={<UseReducer/>}></Route>
+      <Route path='/Useref' element={<UseRef/>}></Route>
+      <Route path='/UseMemo' element={<UseMemo/>}></Route>
+      <Route path='/Usecallback' element={<Usecallback/>}></Route>
       </Routes>
     </BrowserRouter>
   )
