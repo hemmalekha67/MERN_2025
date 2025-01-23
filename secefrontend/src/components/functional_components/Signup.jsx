@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import'../../css/Signup.css';
+import'../../Css/Signup.css';
 const Signup = () => {
   return (
     <div className="form-container">
