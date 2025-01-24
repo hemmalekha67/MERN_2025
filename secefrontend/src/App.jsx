@@ -18,6 +18,7 @@ import Usecallback from './components/functional_components/Hooks/Usecallback';
 import ReactLifecycleMethods from './components/Class_components/ReactLifecycleMethods';
 import UseContext from './components/functional_components/Hooks/UseContext';
 import Memo from './components/functional_components/Memoization/Memo';
+import ClassCompEG from './components/Class_components/ClassComEG';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -43,6 +44,7 @@ function App() {
       <Route path='/ReactLifecycleMethods' element={<ReactLifecycleMethods/>}></Route>
       <Route path="UseContext" element={<UseContext/>}></Route>
       <Route path="Memo" element={<Memo/>}></Route>
+      <Route path="ClassCompEG" element={<ClassCompEG/>}></Route>
     
       </Routes>
     </BrowserRouter>
