@@ -15,6 +15,7 @@ import UseReducer from './components/functional_components/Hooks/UseReducer';
 import UseRef from './components/functional_components/Hooks/UseRef';
 import UseMemo from './components/functional_components/Hooks/UseMemo';
 import Usecallback from './components/functional_components/Hooks/Usecallback';
+import ReactLifecycleMethods from './components/Class_components/ReactLifecycleMethods';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -37,6 +38,7 @@ function App() {
       <Route path='/Useref' element={<UseRef/>}></Route>
       <Route path='/UseMemo' element={<UseMemo/>}></Route>
       <Route path='/Usecallback' element={<Usecallback/>}></Route>
+      <Route path='/ReactLifecycleMethods' element={<ReactLifecycleMethods/>}></Route>
       </Routes>
     </BrowserRouter>
   )

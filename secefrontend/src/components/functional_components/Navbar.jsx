@@ -33,6 +33,7 @@ const Navbar=()=>{
                                 borderRadius: '5px',
                                 zIndex: 1,
                             }}>
+                         <li><Link to='/ReactLifecycleMethods' className='link'>LifeCyle</Link></li>       
                        <li><Link to='/useState' className='link'>useState</Link></li>
                         <li><Link to='/useEffect' className='link'>useEffect</Link></li>
                         <li><Link to='' className='link'>UseEffectAPI</Link></li>
