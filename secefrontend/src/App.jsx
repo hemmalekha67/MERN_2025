@@ -16,6 +16,8 @@ import UseRef from './components/functional_components/Hooks/UseRef';
 import UseMemo from './components/functional_components/Hooks/UseMemo';
 import Usecallback from './components/functional_components/Hooks/Usecallback';
 import ReactLifecycleMethods from './components/Class_components/ReactLifecycleMethods';
+import UseContext from './components/functional_components/Hooks/UseContext';
+import Memo from './components/functional_components/Memoization/Memo';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -39,6 +41,9 @@ function App() {
       <Route path='/UseMemo' element={<UseMemo/>}></Route>
       <Route path='/Usecallback' element={<Usecallback/>}></Route>
       <Route path='/ReactLifecycleMethods' element={<ReactLifecycleMethods/>}></Route>
+      <Route path="UseContext" element={<UseContext/>}></Route>
+      <Route path="Memo" element={<Memo/>}></Route>
+    
       </Routes>
     </BrowserRouter>
   )
