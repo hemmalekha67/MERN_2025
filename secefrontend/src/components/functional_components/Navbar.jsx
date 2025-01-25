@@ -21,6 +21,7 @@ const Navbar=()=>{
                 <li><Link to='/About' className="link">About</Link></li>
                 <li><Link to='/Gallery' className="link">Gallery</Link></li>
                 <li><Link to='/Contact' className="link">Contact</Link></li>
+                <li><Link to='/hoc' className="link">Higher Order Components</Link></li>
                 <div onMouseEnter={togglehDropdown} onMouseLeave={togglehDropdown} style={{ position: 'relative', display: 'inline-block' }}>
                         <span style={{color :'black'}}>Hooks</span>
                         {hookdropdown && (
@@ -48,6 +49,7 @@ const Navbar=()=>{
                         <li><Link to='/UseMemo' className='link'>UseMemo</Link></li>
                         <li><Link to='/Usecallback' className='link'>UseCallback</Link></li>
                         <li><Link to='/UseContext' className='link'>UseContext</Link></li>
+                        <li><Link to='/UseLocalStorage' className='link'>CustomHooks</Link></li>
                     </ul>)}
                 </div>
                 <div  onMouseEnter={togglemDropdown} onMouseLeave={togglemDropdown} style={{ position: 'relative', display: 'inline-block' }}>
@@ -67,12 +69,14 @@ const Navbar=()=>{
                                 borderRadius: '5px',
                                 zIndex: 1,
                             }}>
-                         <li><Link to='/Memo' className='link'>Memo</Link></li>       
+                         <li><Link to='/Memo' className='link'>Memo</Link></li>  
+                         <li><Link to='/lazy' className="link">LazySuspense</Link></li>     
                        
                     </ul>)}
                     </div>
                 <li><Link to='/Signup 'className="link">SignUp</Link></li>
                 <li><Link to='/login 'className="link">Login</Link></li>
+                
 
             </ol>
         </nav>

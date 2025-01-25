@@ -19,6 +19,9 @@ import ReactLifecycleMethods from './components/Class_components/ReactLifecycleM
 import UseContext from './components/functional_components/Hooks/UseContext';
 import Memo from './components/functional_components/Memoization/Memo';
 import ClassCompEG from './components/Class_components/ClassComEG';
+import LocalLoadingWithSuspense from './components/functional_components/Memoization/LocalLoadingWithSuspense';
+import UseLocalStorage from './components/functional_components/Hooks/CustomHooks/UseLocalStorage'
+import HOC from './components/functional_components/HOC/HOC';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -42,10 +45,12 @@ function App() {
       <Route path='/UseMemo' element={<UseMemo/>}></Route>
       <Route path='/Usecallback' element={<Usecallback/>}></Route>
       <Route path='/ReactLifecycleMethods' element={<ReactLifecycleMethods/>}></Route>
-      <Route path="UseContext" element={<UseContext/>}></Route>
-      <Route path="Memo" element={<Memo/>}></Route>
+      <Route path="/UseContext" element={<UseContext/>}></Route>
+      <Route path="/Memo" element={<Memo/>}></Route>
       <Route path="ClassCompEG" element={<ClassCompEG/>}></Route>
-    
+    <Route path="/lazy" element={<LocalLoadingWithSuspense/>}></Route>
+    <Route path='/UseLocalStorage' element={<UseLocalStorage/>}></Route>
+    <Route path='/hoc' element={<HOC/>}></Route>
       </Routes>
     </BrowserRouter>
   )
