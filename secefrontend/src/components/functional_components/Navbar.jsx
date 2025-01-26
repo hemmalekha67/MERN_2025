@@ -50,6 +50,7 @@ const Navbar=()=>{
                         <li><Link to='/Usecallback' className='link'>UseCallback</Link></li>
                         <li><Link to='/UseContext' className='link'>UseContext</Link></li>
                         <li><Link to='/UseLocalStorage' className='link'>CustomHooks</Link></li>
+                        <li><Link to='/DarkModeToggle'className='link'>CustomHooks1</Link></li>
                     </ul>)}
                 </div>
                 <div  onMouseEnter={togglemDropdown} onMouseLeave={togglemDropdown} style={{ position: 'relative', display: 'inline-block' }}>

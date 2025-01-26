@@ -22,7 +22,7 @@ import ClassCompEG from './components/Class_components/ClassComEG';
 import LocalLoadingWithSuspense from './components/functional_components/Memoization/LocalLoadingWithSuspense';
 import UseLocalStorage from './components/functional_components/Hooks/CustomHooks/UseLocalStorage'
 import HOC from './components/functional_components/HOC/HOC';
-
+import DarkModeToggle from './components/functional_components/Hooks/CustomHooks/DarkModeToggle';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -51,6 +51,7 @@ function App() {
     <Route path="/lazy" element={<LocalLoadingWithSuspense/>}></Route>
     <Route path='/UseLocalStorage' element={<UseLocalStorage/>}></Route>
     <Route path='/hoc' element={<HOC/>}></Route>
+    <Route path='/DarkModeToggle' element={<DarkModeToggle/>}></Route>
       </Routes>
     </BrowserRouter>
   )
