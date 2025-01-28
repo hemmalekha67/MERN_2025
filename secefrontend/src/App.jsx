@@ -23,21 +23,21 @@ import LocalLoadingWithSuspense from './components/functional_components/Memoiza
 import UseLocalStorage from './components/functional_components/Hooks/CustomHooks/UseLocalStorage'
 import HOC from './components/functional_components/HOC/HOC';
 import DarkModeToggle from './components/functional_components/Hooks/CustomHooks/DarkModeToggle';
-function App() {
-  const [count, setCount] = useState(0)
 
+function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <BrowserRouter>
-    <Navbar/>
+    {isLoggedIn && <Navbar setIsLoggedIn={setIsLoggedIn} />}
       <Routes>
-      <Route path="/"element={<Home />}></Route>
+      <Route path="/login"element={<Login setIsLoggedIn={setIsLoggedIn} />}/>
+      <Route path="/" element={<Signup/>} />
+      <Route path="/home"element={<Home />}></Route>
       <Route path="/about"element={<About />}></Route>
       <Route path="/gallery"element={<Gallery page="Gallery" image="SECE Logo" />}></Route>
       <Route path="/contact"element={<Contact />}></Route>
       <Route path="/useState"element={<UseState/>}></Route>
       <Route path="/useEffect"element={<UseEffect/>}></Route>
-      <Route path="/signup"element={<Signup />}></Route>
-      <Route path="/login"element={<Login />}></Route>
       <Route path='/UseEffectAPI'element={<UseEffectAPI/>}></Route>
       <Route path='/UseEffectAPIimage' element={<UseEffectAPIimage/>}></Route>
       <Route path='/UseReducer'element={<UseReducer/>}></Route>
@@ -52,6 +52,7 @@ function App() {
     <Route path='/UseLocalStorage' element={<UseLocalStorage/>}></Route>
     <Route path='/hoc' element={<HOC/>}></Route>
     <Route path='/DarkModeToggle' element={<DarkModeToggle/>}></Route>
+    
       </Routes>
     </BrowserRouter>
   )
